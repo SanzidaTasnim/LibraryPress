@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = (env, argv) => {
     return {
@@ -46,13 +47,17 @@ module.exports = (env, argv) => {
         resolve: {
             extensions: ['.js', '.jsx']
         },
-        externals: {
-            react: 'React',
-            'react-dom': 'ReactDOM',
-            '@wordpress/blocks': ['wp', 'blocks'],
-            '@wordpress/block-editor': ['wp', 'blockEditor'],
-            '@wordpress/element': ['wp', 'element'],
-        },
+
+        plugins: [
+            new webpack.ProvidePlugin({
+                React: 'react',
+                ReactDOM: 'react-dom',
+                wp: '@wordpress/blocks',
+                wpElement: ['@wordpress/element', 'default'],
+                wpBlockEditor: ['@wordpress/block-editor', 'default']
+            })
+        ],
+        
         devtool: 'source-map',
     };
 };

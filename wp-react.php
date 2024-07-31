@@ -14,6 +14,12 @@
  * Domain Path:       /languages
  */
 
+add_action( 'admin_enqueue_scripts', 'enqueue_scripts');
+
+function enqueue_scripts(){
+	wp_enqueue_script( 'admin', plugins_url( 'spa/build/admin.bundle.js', __FILE__ ), [], '0.1', true );
+}
+
 add_action( 'admin_menu', 'wr_menu_page_react' );
 
 function wr_menu_page_react() {
