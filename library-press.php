@@ -2,7 +2,7 @@
 /*
  * Plugin Name:       LibraryPress
  * Plugin URI:        
- * Description:       Develop a WordPress plugin for managing a library system that handles book records.
+ * Description:       A WordPress plugin for managing a library system that handles book records.
  * Version:           1.0
  * Requires at least: 5.2
  * Requires PHP:      7.2
@@ -79,6 +79,7 @@
 		
 		new App\Shortcode();
 		new App\Common();
+		new App\Api();
 	 }
 
 	/**

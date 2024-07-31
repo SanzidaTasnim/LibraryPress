@@ -50,7 +50,7 @@ class Installer {
         `author` varchar(255) DEFAULT NULL,
         `publisher` varchar(255) DEFAULT NULL,
         `ISBN` varchar(255) DEFAULT NULL,
-        `publication date` varchar(255) DEFAULT NULL,
+        `publication_date` varchar(255) DEFAULT NULL,
         `created_by` bigint(20) unsigned NOT NULL,
         `created_at` datetime NOT NULL,
         PRIMARY KEY (`id`)
