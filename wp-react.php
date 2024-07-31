@@ -15,6 +15,10 @@
  */
 
 add_action( 'admin_enqueue_scripts', 'enqueue_scripts');
+add_action( 'wp_enqueue_scripts', 'public_enqueue_scripts');
+function public_enqueue_scripts() {
+	wp_enqueue_script( 'front-js-test', plugins_url( 'spa/build/public.bundle.js', __FILE__ ), [], '0.1', true );
+}
 
 function enqueue_scripts(){
 	wp_enqueue_script( 'admin', plugins_url( 'spa/build/admin.bundle.js', __FILE__ ), [], '0.1', true );
@@ -39,3 +43,9 @@ function wp_react_callback() {
       <div id="wr_test_container"></div>
    <?php
 }
+
+add_shortcode( 'test', function(){
+	?>
+		<div id="wrapper-front"></div>
+	<?php
+} );
