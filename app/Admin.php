@@ -12,7 +12,7 @@ class Admin
      * class constructor
      */
     public function __construct() {
-        add_action('admin_enqueue_scripts', [ $this, 'admin_enqueue' ] );
+        add_action( 'admin_enqueue_scripts', [ $this, 'admin_enqueue' ] );
         add_action( 'admin_menu', [ $this, 'menu_add' ] );
     }
 

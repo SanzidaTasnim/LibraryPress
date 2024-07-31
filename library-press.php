@@ -26,6 +26,13 @@
   */ 
  final class LibraryPress {
 	 static $instance = false;
+
+	 /**
+     * Plugin version
+     *
+     * @var string
+     */
+    const version = '1.0';
  
 	 /**
 	  * class constructor
@@ -35,6 +42,8 @@
 		 $this->include();
 		 $this->define();
 		 $this->hooks();
+		 register_activation_hook( __FILE__, [ $this, 'activate' ] );
+
 	 }
  
 	 /**
@@ -53,7 +62,7 @@
 		 define( 'LIBRARYPRESS_DIR', dirname( LIBRARYPRESS ) );
 		 define( 'LIBRARYPRESS_ASSET', plugins_url( 'assets', LIBRARYPRESS ) );
 		 define( 'LIBRARYPRESS_SPA', plugins_url( 'spa', LIBRARYPRESS ) );
-
+		 define( 'LIBRARYPRESS_VERSION', self::version );
 	 }
  
 	 /**
@@ -71,6 +80,16 @@
 		new App\Shortcode();
 		new App\Common();
 	 }
+
+	/**
+     * Do stuff upon plugin activation
+     *
+     * @return void
+     */
+    public function activate() {
+        $installer = new App\Installer();
+        $installer->run();
+    }
  
 	 /**
 	  * Singleton Instance
@@ -86,6 +105,6 @@
  }
  
  /**
-  * Cick off the plugins 
+  * kick off the plugins 
   */
   LibraryPress::get_esent_plugin();
