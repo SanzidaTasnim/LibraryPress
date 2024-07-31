@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client';
 function App() {
   return (
     <>
-      <h1>hello world</h1>
+      <h1 className='text-red-600'>hello world</h1>
     </>
   )
 }

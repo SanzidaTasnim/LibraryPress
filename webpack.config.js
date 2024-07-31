@@ -7,6 +7,7 @@ module.exports = (env, argv) => {
         entry: {
             'admin': path.resolve(__dirname, 'spa/admin/src/App.jsx'),
             'public': path.resolve(__dirname, 'spa/public/src/App.jsx'),
+            'tailwind': path.resolve(__dirname, 'assets/common/css/tailwind.css')
         },
         output: {
             filename: '[name].bundle.js',

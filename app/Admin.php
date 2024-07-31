@@ -21,6 +21,7 @@ class Admin
      */
     public function admin_enqueue() {
         wp_enqueue_script( 'librarypress', LIBRARYPRESS_SPA . '/build/admin.bundle.js', [], time(), true );
+        wp_enqueue_script( 'librarypress-tailwind', LIBRARYPRESS_SPA . '/build/tailwind.bundle.js', [], time(), true );
     }
 
 
