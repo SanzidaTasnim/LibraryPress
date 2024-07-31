@@ -10,8 +10,8 @@ function App() {
 }
 
 // Assuming the container exists in your HTML file
-const container = document.getElementById('wr_test_container');
+const container = document.getElementById('librarypress_container');
 const root = createRoot(container);
 root.render(<App />);
 
-export default App
+export default App;

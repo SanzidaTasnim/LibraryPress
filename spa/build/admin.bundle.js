@@ -33528,7 +33528,7 @@ function App() {
 }
 
 // Assuming the container exists in your HTML file
-var container = document.getElementById('wr_test_container');
+var container = document.getElementById('librarypress_container');
 var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(container);
 root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(App, null));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);

@@ -49,15 +49,15 @@ module.exports = (env, argv) => {
             extensions: ['.js', '.jsx']
         },
 
-        plugins: [
-            new webpack.ProvidePlugin({
-                React: 'react',
-                ReactDOM: 'react-dom',
-                wp: '@wordpress/blocks',
-                wpElement: ['@wordpress/element', 'default'],
-                wpBlockEditor: ['@wordpress/block-editor', 'default']
-            })
-        ],
+        // plugins: [
+        //     new webpack.ProvidePlugin({
+        //         React: 'react',
+        //         ReactDOM: 'react-dom',
+        //         wp: '@wordpress/blocks',
+        //         wpElement: ['@wordpress/element', 'default'],
+        //         wpBlockEditor: ['@wordpress/block-editor', 'default']
+        //     })
+        // ],
         
         devtool: 'source-map',
     };
